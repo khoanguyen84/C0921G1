@@ -6,6 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <!-- <style>
+        table, tr, td{
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        td{
+            width: 25px;
+            height: 25px;
+        }
+        table tr:nth-child(2n+1) td:nth-child(2n){
+            background-color: orange;
+        }
+
+        table tr:nth-child(2n) td:nth-child(2n+1){
+            background-color: orange;
+        }
+    </style> -->
 </head>
 
 <body>
@@ -14,7 +31,13 @@
             <tr>
                 <td>Fullname</td>
                 <td>
-                    <input type="text">
+                    <input class="inp" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Search</td>
+                <td>
+                    <input id="search" type="search">
                 </td>
             </tr>
             <tr>
@@ -24,13 +47,190 @@
                 </td>
             </tr>
             <tr>
+                <td>Country</td>
+                <td>
+                    <select>
+                        <option value="1">VietNam</option>
+                        <option value="2">Thailand</option>
+                        <option value="3" selected>Korean</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Hand phone</td>
+                <td>
+                    <input type="tel">
+                </td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td>
+                    <input type="range" min="14" max="30" value="0"
+                    oninput="changeFontSize(this)">
+                </td>
+            </tr>
+            <tr>
+                <td>Avatar</td>
+                <td>
+                    <input style="width:100px; height:100px;" onmouseover="this.style.transform = Scale(3,3)" type="image" src="resources/avatar.jpg">
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies</td>
+                <td>
+                    <input type="checkbox" checked> football
+                    <input type="checkbox"> walking
+                    <input type="checkbox"> swiming
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" checked name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>
+                    <input type="color" onchange="document.getElementsByTagName('body')[0].style.backgroundColor=this.value">
+                </td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>
+                    <input type="date" min="2021-01-01" max="2021-12-31">
+                    <input type="datetime-local"> <br>
+                    <input type="time"> <br>
+                    <input type="week"> <br>
+                    <input type="month">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Upload avatar</td>
+                <td>
+                    <input type="file" accept="image/jpg">
+                    <input type="hidden" value="C0921G1">
+                </td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td>
+                    <input type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td>
+                    <input type="url" required>
+                </td>
+            </tr>
+            <tr>
                 <td colspan="2">
-                    <button>Save</button>
-                    <input type="button" value="Cancel">
+                    <!-- <button type="submit">Save</button>
+                    <button type="reset">Cancel</button> -->
+                    <input type="submit" value="Save">
+                    <input type="reset" value="Cancel">
                 </td>
             </tr>
         </table>
     </form>
+    <!-- <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> -->
+    <!-- <script>
+        // function changeFontSize(element){
+        function changeFontSize(){
+            document.getElementsByTagName('body')[0].style.fontSize= Number(document.getElementsByTagName('input')[4].value)+ 'px';
+            // document.getElementsByTagName('body')[0].style.fontSize= Number(element.value)+ 'px'
+        }
+    </script> -->
+    <script src="script.js"></script>
 </body>
 
 </html>
