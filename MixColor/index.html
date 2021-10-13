@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix Color</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <div id="color-area"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>RED</td>
+            <td>GREEN</td>
+            <td>BLUE</td>
+            <td>ALPHA</td>
+        </tr>
+        <tr>
+            <td>
+                <input id="red" type="range" min="0" max="255" value="255" oninput="changeColor()">
+            </td>
+            <td><input id="green" type="range" min="0" max="255" value="93" oninput="changeColor()"></td>
+            <td><input id="blue" type="range" min="0" max="255" value="244" oninput="changeColor()"></td>
+            <td><input id="alpha" type="range" min="0" max="100" value="70" oninput="changeColor()"></td>
+        </tr>
+        <tr>
+            <td id="lbRed"></td>
+            <td id="lbGreen"></td>
+            <td id="lbBlue"></td>
+            <td id="lbAlpha"></td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

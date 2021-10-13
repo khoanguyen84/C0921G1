@@ -1,0 +1,116 @@
+*,*::before,*::after{
+    font-family: 'Courier New', Courier, monospace;
+    padding:0px;
+    margin: 0px;
+}
+h1, h4{
+    color:blue;
+    background-color: olive;
+}
+
+#idH3{
+    background-color: green;
+    color:white;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    /* margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    margin-left: 30px; */
+
+    /* margin: 10px 30px 10px 30px; */
+
+    /* margin: 10px 30px; */
+    margin: 30px;
+    padding: 10px;
+    /* border-width: 5px;
+    border-style: double;
+    border-color: red; */
+    border: 5px double red;
+
+}
+
+#circle{
+    width: 200px;
+    height: 200px;
+    display: block;
+    background-color: brown;
+    border-radius: 50%;
+}
+.c1{
+    font-weight: bold;
+    font-size: 15px;
+    color:tomato;
+}
+
+ul>li{
+    color:blue
+}
+
+input[type='text']{
+    background-color: orange;
+}
+a[target]{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    border:1px solid tomato;
+    background-color: tomato;
+    padding:5px;
+    border-radius: 5px;
+    color:white;
+}
+a:hover{
+    background-color: lightcoral;
+    border:1px solid lightcoral;
+}
+
+input[type='checkbox']:checked{
+    width: 30px;
+    height: 30px;
+}
+
+ul li:last-child{
+    color:red;
+}
+
+input[type='password']:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px dashed red;;
+}
+
+
+
+input[type='email']:invalid{
+    border: 2px solid red;
+}
+input[type='email']:invalid + span::after{
+    content: "invalid email";
+    color:red;
+    display: block;
+}
+h1::after{
+    content: "Khoa";
+    display: block;
+}
+p::first-letter{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+p::first-line{
+    background-color: orange;
+}
+p::selection{
+    color:red;
+    background-color: black;
+}
+
+@media (max-width:700px){
+    #idH3{
+        width: 200px;
+        background-color: brown;
+    }
+}
