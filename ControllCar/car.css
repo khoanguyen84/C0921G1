@@ -1,0 +1,30 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body,html{
+    background-color: #f7f7f7;
+}
+#tbControll button{
+    border:none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f39c12;
+    color: white;
+    margin:3px;
+}
+
+#tbControll button:hover{
+    background-color: #e67e22;
+}
+
+#tbControll{
+    border-radius: 50%;
+    background-color: #f1c40f;
+    position: relative;
+    top:400px;
+    left: 0;
+}
