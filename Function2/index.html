@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            border-collapse: collapse;
+            border:1px solid black;
+        }
+        td{
+            text-align: center;
+            width: 20px;
+        }
+        div{
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>Size</td>
+                <td>
+                    <input type="number" id="size" value="10">
+                </td>
+            </tr>
+            <tr>
+                <td>Min value</td>
+                <td>
+                    <input type="number" id="min" value="10">
+                </td>
+            </tr>
+            <tr>
+                <td>Max value</td>
+                <td>
+                    <input type="number" id="max" value="90">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="process()">Process</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="printMatrix"></div>
+    <div id="printXValueMatrix"></div>
+    <div>
+        <ol id="result">
+        </ol>
+    </div>
+    <div id="printTriangleDown"></div>
+    <div id="printTriangleUp"></div>
+    <script src="matrix.js"></script>
+</body>
+</html>
