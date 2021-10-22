@@ -14,6 +14,8 @@ let products = [
 ]
 
 
+let carts = [];
+
 function printProduct(){
     let tbody = document.getElementsByTagName('tbody')[0];
 
@@ -25,6 +27,7 @@ function printProduct(){
                                 <td>${product.quantity}</td>
                                 <td>
                                     <button onclick="editProduct(${product.id})">Edit</button>
+                                    <button onclick="addToCart(${product.id})">Add to cart</button>
                                 </td>
                             </tr>`;
     })
@@ -49,4 +52,48 @@ function editProduct(id){
             `)
 }
 
+function addToCart(productId){
+    let product = products.find(function(product, index){
+        return product.id == productId;
+    });
+    carts.push(product);
+    countItemInCart();
+    showCart();
+}
+
+function showCart(){
+    let tbody = document.getElementById('cart');
+    tbody.innerHTML ="";
+    carts.forEach(function(product, index){
+        tbody.innerHTML += `<tr>
+                                <td>${index + 1}</td>
+                                <td>${product.name}</td>
+                                <td>${product.price}</td>
+                                <td>1</td>
+                                <td>${product.price}</td>
+                                <td>
+                                    <button onclick="removeItemInCart(${index})">Remove</button>
+                                </td>
+                            </tr>`;
+    });
+    let tfoot = document.getElementsByTagName('tfoot')[0];
+    tfoot.children[0].children[1].innerHTML = calculateTotalAmount();
+
+}
+
+function countItemInCart(){
+    document.getElementsByTagName("h2")[0].innerHTML = `Cart(${carts.length})`;
+}
+
+function removeItemInCart(position){
+    carts.splice(position,1);
+    showCart();
+    countItemInCart();
+}
+
+function calculateTotalAmount(){
+    return carts.reduce(function(total, item, index){
+        return total + item.price;
+    },0)
+}
 printProduct();
